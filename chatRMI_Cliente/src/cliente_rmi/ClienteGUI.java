@@ -188,7 +188,7 @@ public class ClienteGUI extends javax.swing.JFrame {
             }
             try{
                 cliente= new Cliente(t2.getText());
-               // cliente.setGUI(this);
+                cliente.setGUI(this);
                 Registry reg=LocateRegistry.getRegistry(t1.getText(),1099);
                 servidor=(InterfazServidor)reg.lookup("Servidor");
                 servidor.registrar(cliente);
